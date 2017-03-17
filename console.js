@@ -8,6 +8,8 @@ const CSS = `
       position: fixed;
       bottom: 0;
       z-index: 1000;
+      max-height: 100px;
+      overflow: auto;
     }
 
     #cons > span {
