@@ -1,18 +1,24 @@
 const CSS = `
   <style>
     #cons {
-      display: block;
       width: 100%;
-      background: black;
+      background: #000;
       color: #fff;
       font-family: 'Courier', 'Courier New', monospace;
+      position: fixed;
+      bottom: 0;
+      z-index: 1000;
     }
 
-    #cons span {
+    #cons > span {
       display: block;
       border-bottom: 1px solid #333333;
     }
-    
+
+    #cons > span:before {
+      content: '> ';
+    }
+
     #cons span.error {
       color: red;
     }
@@ -21,19 +27,16 @@ const CSS = `
       color: yellow;
     }
 
-    #cons span:before {
-      content: '> '; 
-    }
   </style>`;
 
 
 class Console {
   constructor() {
-    document.getElementsByTagName('body')[0].innerHTML+=`${CSS}<div id="cons"></div>`;
-    this.console = document.getElementById('cons'); 
+    document.getElementsByTagName('body')[0].innerHTML += `${CSS}<div id="cons"></div>`;
+    this.console = document.getElementById('cons');
   }
 
-  log (text, cssClass='') {
+  log (text, cssClass='log') {
     this.console.innerHTML +=  `<span class="${cssClass}">${text}</span>`;
   }
 
