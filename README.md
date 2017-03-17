@@ -8,7 +8,7 @@ I find it useful so decided to share it.
 Import it manually in the HTML view
 
 ```
-<script type="text/javascript" src="https://cdn.rawgit.com/rcocetta/jsfiddle-inline-console/master/console.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/rcocetta/jsfiddle-inline-console/005f45a73b2a58a210fb8636767fe14342272199/console.js"></script>
 ```
 
 use it with `console.log`, `console.warn`, `console.error`.
