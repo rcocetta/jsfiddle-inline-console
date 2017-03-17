@@ -44,10 +44,11 @@ class Console {
   warn(text) {
     this.log(text, 'warn');
   }
+  line() {
+    this.log('<hr/>');
+  }
 }
 
 console = new Console();
 
-console.log('test');
-console.warn('test2');
-console.error('test3');
+console.log('----- YOUR CONSOLE IS WORKING ---- ');
